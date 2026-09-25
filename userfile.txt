@@ -1,0 +1,32 @@
+node *sort(node *head) {
+    int swapped;
+    node *ptr1;
+    node *last = NULL;
+
+    if (head == NULL)
+        return head;
+
+    do {
+        swapped = 0;
+        ptr1 = head;
+
+        while (ptr1->next != last) {
+            if (ptr1->priority > ptr1->next->priority) {
+                int temp_pid = ptr1->pid;
+                int temp_priority = ptr1->priority;
+
+                ptr1->pid = ptr1->next->pid;
+                ptr1->priority = ptr1->next->priority;
+
+                ptr1->next->pid = temp_pid;
+                ptr1->next->priority = temp_priority;
+
+                swapped = 1;
+            }
+            ptr1 = ptr1->next;
+        }
+        last = ptr1;
+    } while (swapped);
+
+    return head;
+}

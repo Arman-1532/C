@@ -1,0 +1,8 @@
+7
+rajshahi dhaka 320
+dhaka sylhet 250
+sylhet chittagong 300
+chittagong sylhet 350
+dhaka khulna 250
+rajshahi khulna 320
+sylhet rajshahi 400
